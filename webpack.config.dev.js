@@ -6,7 +6,7 @@ module.exports = Object.assign({}, base,
     mode: 'development',
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'magua',
+        title: 'puck-ui',
         template: 'index.html',
       })
     ],
