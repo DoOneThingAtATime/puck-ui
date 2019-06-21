@@ -9,34 +9,22 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist/lib'),
-    libraryTarget: 'umd',
+    libraryTarget: 'umd'
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'awesome-typescript-loader',
+        loader: 'awesome-typescript-loader'
       },
       {
         test: /\.svg$/,
-        loader: 'svg-sprite-loader',
+        loader: 'svg-sprite-loader'
       },
       {
-        test: /\.s([ac])ss$/,
-        use: [
-          devMode ? 'style-loader' : {
-            loader: MiniCssExtractPlugin.loader,
-            options: {}
-          },
-          'css-loader',
-          {
-            loader: 'sass-loader',
-            options: {
-              includePaths: [path.resolve(__dirname, 'stylesheets', 'include')]
-            }
-          }
-        ]
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
-  },
+  }
 }
