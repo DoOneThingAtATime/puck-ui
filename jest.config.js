@@ -8,9 +8,8 @@ module.exports = {
   collectCoverageFrom: ["lib/**/*.{ts,tsx}", "!**/node_modules/**"],
   // collectCoverageFrom: ["{lib, include}/**/*.{ts, tsx}", "!**/node_modules/**"],
   coverageDirectory: 'coverage',
-  reporters: ['default'],
+  reporters: ['default', 'jest-junit'],
   coverageReporters: ['text', 'lcov'],
-  // reporters: ['default', 'jest-junit'],
   
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleDirectories: ['node_modules'],
