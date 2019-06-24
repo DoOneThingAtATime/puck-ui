@@ -1,14 +1,15 @@
-const base = require('./webpack.config')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const base = require('./webpack.config');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = Object.assign({}, base, 
-  {
-    mode: 'development',
-    plugins: [
-      new HtmlWebpackPlugin({
-        title: 'puck-ui',
-        template: 'index.html',
-      })
-    ],
-  }
-)
+module.exports = Object.assign({}, base, {
+  mode: 'development',
+  entry: {
+    example: './example.tsx'
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'puck-ui',
+      template: 'example.html'
+    })
+  ]
+});
