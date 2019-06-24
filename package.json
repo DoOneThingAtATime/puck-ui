@@ -1,9 +1,9 @@
 {
   "name": "puck-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "一个基于 ReactJS 的 UI, 取名来自 Dota2 英雄仙女龙帕克。",
   "files": [
-    "/dist"
+    "/dist/**/*"
   ],
   "main": "dist/lib/puck.js",
   "types": "dist/lib/index",
