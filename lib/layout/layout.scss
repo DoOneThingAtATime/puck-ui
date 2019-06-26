@@ -4,7 +4,7 @@
   border: 1px solid red;
   display: flex;
   flex-direction: column;
-  &.hasAside {
+  &.puck-layout-hasAside {
     flex-direction: row;
     .puck-layout {
       flex-direction: column;

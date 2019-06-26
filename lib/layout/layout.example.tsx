@@ -40,7 +40,7 @@ export default function() {
       </div> */}
       <div>
         <h1>第四个例子</h1>
-        <Layout style={{ height: 200 }}>
+        <Layout style={{ height: 200 }} className="gua">
           <Aside>aside</Aside>
           <Layout>
             <Header>header</Header>
