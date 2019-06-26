@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import { scopedClassMaker } from '../classes';
+import { scopedClassMaker } from '../helper/classes';
 import './layout.scss';
 import Aside from './aside';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { scopedClassMaker } from '../classes';
+import { scopedClassMaker } from '../helper/classes';
 
 const sc = scopedClassMaker('puck-layout');
 interface Props extends React.HTMLAttributes<HTMLElement> {}
