@@ -24,7 +24,7 @@
     "noUnusedLocals": true
   },
   "include": [
-    "lib/**/*"
+    "lib/**/*", "demo.tsx"
   ],
   "exclude": [
     "node_modules",

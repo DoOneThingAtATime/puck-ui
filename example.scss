@@ -26,12 +26,20 @@ $border-color: #eee;
     font-size: 16px;
   }
   ul {
-    padding: 0 $padding;
     min-width: 12em;
     > li {
       padding: 8px 0;
       a {
-        color: $main-color;
+        color: #ddd;
+        display: block;
+        padding: 8px $padding;
+        &:hover {
+          color: $main-color;
+        }
+        &.active {
+          background: lighten($main-color, 60%);
+          color: $main-color;
+        }
       }
     }
   }
