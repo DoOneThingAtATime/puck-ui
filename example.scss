@@ -2,6 +2,10 @@ $padding: 16px;
 $main-color: #164e87;
 $border-color: #eee;
 
+pre {
+  font-family: "Source Code Pro", sans-serif, monospace;
+}
+
 .site-page {
   background: white;
 }
@@ -53,6 +57,9 @@ $border-color: #eee;
   color: #666;
   padding: 16px 0;
   border-top: 1px solid $border-color;
+}
+.site-demo {
+  padding: $padding 0;
 }
 // reset
 body {
