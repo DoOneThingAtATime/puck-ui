@@ -14,7 +14,7 @@ module.exports = Object.assign({}, base, {
     new HtmlWebpackPlugin({
       title: 'puck-ui',
       template: 'example.html',
-      filename: 'example.html'
+      filename: 'index.html'
     })
   ]
 });
