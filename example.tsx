@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter as Router, Route, NavLink } from 'react-router-dom';
 
-import { Layout, Header, Aside, Content, Footer } from './lib/layout/layout';
+import { Layout, Header, Aside, Content } from './lib/layout/layout';
 
 import IconDemo from './lib/icon/icon.demo';
 import ButtonExample from './lib/button.example';
@@ -17,8 +17,8 @@ ReactDOM.render(
     <Layout className="site-page">
       <Header className="site-header">
         <div className="logo">
-          <img width="100" height="100" src={logo} alt="" />
-          <span>Puck-UI</span>
+          <img height="44" src={logo} alt="" />
+          <span>puck-ui</span>
         </div>
       </Header>
       <Layout>
@@ -46,7 +46,6 @@ ReactDOM.render(
           <Route path="/layout" component={LayoutExample} />
         </Content>
       </Layout>
-      <Footer className="site-footer">&copy; guakun</Footer>
     </Layout>
   </Router>,
   document.querySelector('#root')
