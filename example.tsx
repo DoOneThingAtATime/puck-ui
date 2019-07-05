@@ -8,6 +8,7 @@ import IconDemo from './lib/icon/icon.demo';
 import ButtonExample from './lib/button.example';
 import DialogExample from './lib/dialog/dialog.example';
 import LayoutExample from './lib/layout/layout.example';
+import FormExample from './lib/form/form.example';
 
 const logo = require('./logo.png');
 import './example.scss';
@@ -37,6 +38,9 @@ ReactDOM.render(
             <li>
               <NavLink to="/layout">布局</NavLink>
             </li>
+            <li>
+              <NavLink to="/form">表单</NavLink>
+            </li>
           </ul>
         </Aside>
         <Content className="site-main">
@@ -44,6 +48,7 @@ ReactDOM.render(
           <Route path="/button" component={ButtonExample} />
           <Route path="/dialog" component={DialogExample} />
           <Route path="/layout" component={LayoutExample} />
+          <Route path="/form" component={FormExample} />
         </Content>
       </Layout>
     </Layout>
