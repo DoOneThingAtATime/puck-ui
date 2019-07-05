@@ -16,7 +16,7 @@ export default function() {
   return (
     <div>
       <div
-        style={{ position: 'relative', zIndex: 10, border: '1px solid red' }}
+        style={{ position: 'relative', zIndex: 10 }}
       >
         <h1>example 1</h1>
         <button onClick={() => setX(!x)}>click</button>
@@ -46,7 +46,7 @@ export default function() {
         </Dialog>
       </div>
 
-      <div style={{ position: 'relative', zIndex: 9, border: '1px solid red' }}>
+      <div style={{ position: 'relative', zIndex: 9 }}>
         <h1>example 2</h1>
         <button onClick={() => setY(!y)}>click</button>
         <Dialog
@@ -76,7 +76,7 @@ export default function() {
         </Dialog>
       </div>
 
-      <div style={{ position: 'relative', zIndex: 9, border: '1px solid red' }}>
+      <div style={{ position: 'relative', zIndex: 9 }}>
         <h1>example 3</h1>
         <button onClick={() => alert('操作成功！')}>alert成功提示</button>
         <button
@@ -97,7 +97,7 @@ export default function() {
         </button>
       </div>
 
-      <div style={{ position: 'relative', zIndex: 9, border: '1px solid red' }}>
+      <div style={{ position: 'relative', zIndex: 9 }}>
         <h1>example 4</h1>
         <button onClick={openModal}>modal 渲染 html</button>
       </div>

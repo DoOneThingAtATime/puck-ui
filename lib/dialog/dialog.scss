@@ -21,23 +21,18 @@
 button {
   display: inline-block;
   line-height: 20px;
-  font-size: 14px;
+  font-size: 12px;
   text-align: center;
-  color: #4c5161;
-  border: 1px solid #d0d0d5;
   border-radius: 4px;
   padding: 4px 15px;
   min-width: 50px;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: center;
   text-decoration: none;
   -webkit-transition: border-color .15s, background-color .15s, opacity .15s;
   transition: border-color .15s, background-color .15s, opacity .15s;
   cursor: pointer;
-  overflow: visible; 
-  border: 1px solid #2486ff;
-  background-color: #2486ff;
+  overflow: visible;
+  border: 1px solid #f46258;
+  background: #f46258 no-repeat center;
   color: #fff;
   margin: 0 4px;
   &:first-child {
@@ -48,12 +43,19 @@ button {
   }
 }
 
+$main-color: #f46258;
+
 button:hover {
-  background-color: #0160d5;
-  border-color: #0160d5;
+  background-color: lighten($main-color, 10%);
+  border-color: lighten($main-color, 10%);
   color: #fff; }
+
+button:focus {
+  border-color: darken($main-color, 10%);
+  outline-color: darken($main-color, 10%);
+   }
 
 button:not(.disabled):active,
 button:not(.loading):active {
-  background-color: #0057c3;
-  border-color: #0057c3; }
+  background-color: darken($main-color, 10%);
+  border-color: darken($main-color, 10%); }
