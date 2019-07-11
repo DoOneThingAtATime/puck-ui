@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Dialog, { alert, confirm, modal } from './dialog';
+import Button from '../button/button';
 
 export default function() {
   const [x, setX] = useState(false);
@@ -8,7 +9,7 @@ export default function() {
   const openModal = () => {
     const close = modal(
       <h1>
-        我是一段HTML，啦啦啦啦啦 <button onClick={() => close()}>关闭</button>
+        我是一段HTML，啦啦啦啦啦 <Button onClick={() => close()}>关闭</Button>
       </h1>
     );
   };
@@ -19,24 +20,24 @@ export default function() {
         style={{ position: 'relative', zIndex: 10 }}
       >
         <h1>example 1</h1>
-        <button onClick={() => setX(!x)}>click</button>
+        <Button onClick={() => setX(!x)}>click</Button>
         <Dialog
           visible={x}
           buttons={[
-            <button
+            <Button
               onClick={() => {
                 setX(false);
               }}
             >
               关闭
-            </button>,
-            <button
+            </Button>,
+            <Button
               onClick={() => {
                 setX(false);
               }}
             >
               知道啦！
-            </button>
+            </Button>
           ]}
           onClose={() => {
             setX(false);
@@ -48,24 +49,24 @@ export default function() {
 
       <div style={{ position: 'relative', zIndex: 9 }}>
         <h1>example 2</h1>
-        <button onClick={() => setY(!y)}>click</button>
+        <Button onClick={() => setY(!y)}>click</Button>
         <Dialog
           visible={y}
           buttons={[
-            <button
+            <Button
               onClick={() => {
                 setY(false);
               }}
             >
               关闭
-            </button>,
-            <button
+            </Button>,
+            <Button
               onClick={() => {
                 setY(false);
               }}
             >
               知道啦！
-            </button>
+            </Button>
           ]}
           onClose={() => {
             setY(false);
@@ -78,8 +79,8 @@ export default function() {
 
       <div style={{ position: 'relative', zIndex: 9 }}>
         <h1>example 3</h1>
-        <button onClick={() => alert('操作成功！')}>alert成功提示</button>
-        <button
+        <Button onClick={() => alert('操作成功！')}>alert成功提示</Button>
+        <Button
           onClick={() =>
             confirm(
               `您确定要停用所选的成员吗？
@@ -94,12 +95,12 @@ export default function() {
           }
         >
           confirm确认
-        </button>
+        </Button>
       </div>
 
       <div style={{ position: 'relative', zIndex: 9 }}>
         <h1>example 4</h1>
-        <button onClick={openModal}>modal 渲染 html</button>
+        <Button onClick={openModal}>modal 渲染 html</Button>
       </div>
     </div>
   );
