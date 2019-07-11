@@ -1,61 +1,56 @@
 @import "../helper";
 
 .puck-dialog {
-  position: fixed; background: white; min-width: 30em; border-radius: 4px;
-  top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2;
+  position: fixed;
+  background: white;
+  min-width: 30em;
+  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+
   &-mask {
-    z-index: 1; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     // background-color: rgba(25,28,34,.88);
     background: fade-out($color: rgb(25, 28, 34), $amount: 0.12)
   }
-  &-header { font-size: 22px; padding: 8px 16px; border-bottom: 1px solid gray; }
-  &-main { min-height: 6em; padding: 8px 16px; }
-  &-footer { border-top: 1px solid gray; padding: 8px 16px; display: flex; justify-content: flex-end; }
+
+  &-header {
+    font-size: 22px;
+    padding: 8px 16px;
+    border-bottom: 1px solid gray;
+  }
+
+  &-main {
+    min-height: 6em;
+    padding: 8px 16px;
+  }
+
+  &-footer {
+    border-top: 1px solid gray;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
   &-close {
-    position: absolute; bottom: 100%; left: 100%; background: $main-color; width: 2em; height: 2em;
-    border-radius: 50%; transform: translate(-50%, 50%); display: flex; justify-content: center;
-    align-items: center; color: white;
+    position: absolute;
+    bottom: 100%;
+    left: 100%;
+    background: $main-color;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
   }
 }
-
-button {
-  display: inline-block;
-  line-height: 20px;
-  font-size: 12px;
-  text-align: center;
-  border-radius: 4px;
-  padding: 4px 15px;
-  min-width: 50px;
-  text-decoration: none;
-  -webkit-transition: border-color .15s, background-color .15s, opacity .15s;
-  transition: border-color .15s, background-color .15s, opacity .15s;
-  cursor: pointer;
-  overflow: visible;
-  border: 1px solid #f46258;
-  background: #f46258 no-repeat center;
-  color: #fff;
-  margin: 0 4px;
-  &:first-child {
-    margin-left: 0;
-  }
-  &:last-child {
-    margin-right: 0;
-  }
-}
-
-$main-color: #f46258;
-
-button:hover {
-  background-color: lighten($main-color, 10%);
-  border-color: lighten($main-color, 10%);
-  color: #fff; }
-
-button:focus {
-  border-color: darken($main-color, 10%);
-  outline-color: darken($main-color, 10%);
-   }
-
-button:not(.disabled):active,
-button:not(.loading):active {
-  background-color: darken($main-color, 10%);
-  border-color: darken($main-color, 10%); }

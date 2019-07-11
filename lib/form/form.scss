@@ -1,12 +1,14 @@
 .puck-form {
-  &-row {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    &:first-child {
-      margin-top: 0;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
+  &-td {
+    padding-top: 0;
+    padding-bottom: 32px;
+  }
+
+  &-tr:last-child &-td {
+    padding-bottom: 0;
+  }
+
+  &-td + &-td {
+    padding-left: 16px;
   }
 }

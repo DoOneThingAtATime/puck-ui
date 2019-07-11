@@ -32,24 +32,28 @@ const Form: React.FunctionComponent<Props> = (props) => {
     <form onSubmit={onSubmit}>
       <table>
         {props.fields.map(f =>
-            <tr className={classes('puck-form-row')} key={f.name}>
-              <td>
-                <span>
+          <tr className={classes('puck-form-tr')} key={f.name}>
+            <td className="puck-form-td">
+                <span className="puck-form-label">
                   {f.label}
                 </span>
-              </td>
-              <td>
-                <Input type={f.input.type} value={formData[f.name]}
-                       onChange={onInputChange.bind(null, f.name)}/>
-                <div>{props.errors[f.name]}</div>
-              </td>
-            </tr>
+            </td>
+            <td className="puck-form-td">
+              <Input className="puck-form-input" type={f.input.type} value={formData[f.name]}
+                     onChange={onInputChange.bind(null, f.name)}/>
+              <div>{props.errors[f.name]}</div>
+            </td>
+          </tr>
         )}
-      </table>
 
-      <div>
-        {props.buttons}
-      </div>
+        <tr className="puck-form-tr">
+          <td className="puck-form-td" />
+          <td className="puck-form-td">
+            {props.buttons}
+          </td>
+        </tr>
+
+      </table>
     </form>
   );
 };

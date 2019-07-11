@@ -1,0 +1,38 @@
+@import "../_helper";
+
+.puck-button {
+  padding: 4px 8px;
+  line-height: 22px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.25s;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-normal {
+    color: #595959;
+    border: 1px solid #d9d9d9;
+
+    &:hover, &:focus {
+      border-color: #f46258;
+      color: #f46258;
+    }
+  }
+
+  &-important {
+    color: white;
+    border: 1px solid $main-color;
+    background: $main-color;
+
+    &:hover, &:focus {
+      border-color: lighten($main-color, 10%);
+      background: lighten($main-color, 10%);
+    }
+  }
+
+  & + & {
+    margin-left: 8px;
+  }
+}
