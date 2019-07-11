@@ -34,8 +34,7 @@ const Form: React.FunctionComponent<Props> = (props) => {
         {props.fields.map(f =>
             <tr className={classes('puck-form-row')} key={f.name}>
               <td>
-                {/*<span className="puck-form-label">*/}
-                <span className="puck-form-label">
+                <span>
                   {f.label}
                 </span>
               </td>
