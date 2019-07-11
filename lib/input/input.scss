@@ -1,0 +1,15 @@
+@import "../_helper";
+
+.puck-input {
+  border: 1px solid #DCDEE2;
+  line-height: 22px;
+  padding: 4px 11px;
+  border-radius: 2px;
+  box-shadow: 0 0 0 2px fade_out(#adadad, 1);
+  transition: box-shadow .3s;
+  &:focus {
+    outline: none;
+    border-color: #adadad;
+    box-shadow: 0 0 0 2px fade_out(#adadad, .5);
+  }
+}

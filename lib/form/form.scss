@@ -1,0 +1,26 @@
+.puck-form {
+  &-row {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  //&-label {
+  //  text-align: justify;
+  //  display: inline-block;
+  //  width: 6em;
+  //  overflow: hidden;
+  //  height: 22px;
+  //  &::after {
+  //    content: "diaohfo";
+  //    display: inline-block;
+  //    width: 100%;
+  //    overflow: hidden;
+  //    height: 0;
+  //  }
+  //}
+}

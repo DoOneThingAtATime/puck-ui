@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { ReactFragment } from 'react';
 import { FormErrors } from './validator';
+import Input from '../input/input';
+import classes from '../helper/classes';
+import './form.scss';
 
 export interface FormValue {
   [K: string]: any
@@ -27,14 +30,24 @@ const Form: React.FunctionComponent<Props> = (props) => {
   };
   return (
     <form onSubmit={onSubmit}>
-      {props.fields.map(f =>
-        <div key={f.name}>
-          {f.label}
-          <input type={f.input.type} value={formData[f.name]}
-                 onChange={onInputChange.bind(null, f.name)}/>
-          <div>{props.errors[f.name]}</div>
-        </div>
-      )}
+      <table>
+        {props.fields.map(f =>
+            <tr className={classes('puck-form-row')} key={f.name}>
+              <td>
+                {/*<span className="puck-form-label">*/}
+                <span className="puck-form-label">
+                  {f.label}
+                </span>
+              </td>
+              <td>
+                <Input type={f.input.type} value={formData[f.name]}
+                       onChange={onInputChange.bind(null, f.name)}/>
+                <div>{props.errors[f.name]}</div>
+              </td>
+            </tr>
+        )}
+      </table>
+
       <div>
         {props.buttons}
       </div>
